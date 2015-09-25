@@ -8,6 +8,7 @@ Code distributed by Google as part of the polymer project is also
 subject to an additional IP rights grant found at http://polymer.github.io/PATENTS.txt
 -->
 <link rel="import" href="../polymer/polymer.html">
+<link rel="import" href="../fetch-element/fetch-element.html">
 
 <!--
 An element providing a solution fetching Github issues.
@@ -22,10 +23,33 @@ Example:
 @hero hero.svg
 -->
 
-<script>
+<dom-module id="fetch-github-issues">
+
+  <template>
+    <fetch-element url="[[_computeUrl(userName, repo)]]" data="{{issues}}" mode="cors" auto></fetch-element>
+  </template>
+
+</dom-module>
+
+  <script>
 
   Polymer({
-    is: 'fetch-github-issues'
+    is: 'fetch-github-issues',
+
+    properties: {
+      userName: String,
+      repo: String,
+
+      issues: {
+        type: Array,
+        value: [],
+        notify: true
+      }
+    },
+
+    _computeUrl: function (userName, repo) {
+      return 'https://api.github.com/repos/' + userName + '/' + repo + '/issues';
+    }
   });
 
-</script>
+  </script>
