@@ -21,8 +21,18 @@ subject to an additional IP rights grant found at http://polymer.github.io/PATEN
     <p>An example of <code>&lt;fetch-github-issues&gt;</code>:</p>
 
     <button>Say Something</button>
+    <template id="demo" is="dom-bind">
 
-    <fetch-github-issues></fetch-github-issues>
+      <fetch-github-issues user-name="basicelements" repo="twitch-stream-status" issues="{{issues}}"></fetch-github-issues>
+
+      <template id="list" is="dom-repeat" items="[[issues]]" as="issue">
+
+        <a href="[[issue.html_url]]" target="_blank">
+          <p>[[issue.title]]</p>
+        </a>
+
+      </template>
+    </template>
 
     <script>
       document.querySelector('button').addEventListener('click', function() {
