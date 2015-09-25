@@ -18,6 +18,7 @@
     "/test/"
   ],
   "dependencies": {
+    "fetch-element": "vandeurenglenn/fetch-element#~1.0.3",
     "polymer": "Polymer/polymer#^1.0.0"
   },
   "devDependencies": {
