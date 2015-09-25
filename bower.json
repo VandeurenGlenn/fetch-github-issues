@@ -2,9 +2,9 @@
   "name": "fetch-github-issues",
   "version": "1.0.1",
   "authors": [
-    "Anonymous <anonymous@example.com>"
+    "Glenn Vandeuren <vandeurenglenn@gmail.com>"
   ],
-  "description": "An element providing a solution to no problem in particular.",
+  "description": "An element providing a solution fetching Github issues.",
   "keywords": [
     "web-component",
     "polymer",
@@ -12,7 +12,7 @@
   ],
   "main": "fetch-github-issues.html",
   "license": "http://polymer.github.io/LICENSE.txt",
-  "homepage": "https://github.com/<USERNAME>/seed-element/",
+  "homepage": "https://github.com/vandeurenglenn/fetch-github-issues/",
   "ignore": [
     "/.*",
     "/test/"

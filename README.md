@@ -1,6 +1,6 @@
 # fetch-github-issues
 
-An element providing a starting point for your own reusable Polymer elements.
+An element providing a solution fetching Github issues.
 
 
 ## Dependencies
